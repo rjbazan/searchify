@@ -9,16 +9,21 @@ function panelHeader() {
         }
 }
 
-HomeCtrl.$inject = ['$scope', 'spotify', 'UserService', '$rootScope'];
+HomeCtrl.$inject = ['$scope', 'spotify', 'UserService', '$rootScope', '$translate'];
 
-function HomeCtrl ($scope, spotify, UserService, $rootScope) {
+function HomeCtrl ($scope, spotify, UserService, $rootScope, $translate) {
         var vm = this;
 
         vm.user = null;
         vm.allUsers = [];
         vm.deleteUser = deleteUser;
+        vm.changeLang = changeLang;
 
         initController();
+        
+        function changeLang(langKey) {
+                $translate.use(langKey);
+        }
 
         function initController() {
                 loadCurrentUser();
