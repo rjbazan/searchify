@@ -15,7 +15,8 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'pascalprecht.translate'
   ])
   .config(function ($routeProvider, $locationProvider, $httpProvider) {
     $httpProvider.useApplyAsync(true);
