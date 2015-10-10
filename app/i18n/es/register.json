@@ -1,0 +1,15 @@
+{
+	"register":{
+		"title": "Registro",
+		"firstName": "Nombre",
+		"firstNameRequired": "Falta nombre",
+		"lastName": "Apellido",
+		"lastNameRequired": "Falta apellido",
+		"username": "Nombre de usuario",
+		"usernameRequired": "Falta usuario",
+		"password": "Contraseña",
+		"passwordRequired": "Falta contraseña",
+		"registerBtn": "Registrarse",
+		"cancelBtn": "Cancelar"
+	}
+}

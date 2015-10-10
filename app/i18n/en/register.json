@@ -1,0 +1,15 @@
+{
+	"register":{
+		"title": "Register",
+		"firstName": "First Name",
+		"firstNameRequired": "First name is required",
+		"lastName": "Last Name",
+		"lastNameRequired": "Last name is required",
+		"username": "Username",
+		"usernameRequired": "Username is required",
+		"password": "Password",
+		"passwordRequired": "Password is required",
+		"registerBtn": "Register",
+		"cancelBtn": "Cancel"
+	}
+}

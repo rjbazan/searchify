@@ -1,0 +1,8 @@
+{
+	"header": {
+		"welcome": "Bienvenido {{user}}!",
+		"logout": "Salir",
+		"esBtn":"Español",
+		"enBtn": "Ingles"
+	}
+}

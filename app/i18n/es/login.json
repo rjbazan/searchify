@@ -1,0 +1,11 @@
+{
+	"login": {
+		"title": "Ingresar",
+		"username": "Usuario",
+		"password": "Contraseña",
+		"register": "Registrarse",
+		"usernameRequired": "Falta nombre de usuario",
+		"passwordRequired": "Falta contraseña",
+		"loginBtn": "Ingresar"
+	}
+}
