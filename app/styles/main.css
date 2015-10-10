@@ -1,0 +1,59 @@
+body {
+  background-image: url("../images/backgorund.png");
+}
+figure {
+  float: left;
+   margin-top: 1em;
+   margin-bottom: 1em;
+   margin-left: 40px;
+   margin-right: 40px;
+}
+.image {
+    display: block;
+    overflow: hidden;
+    background-size: cover;
+    width: 33%;
+    height: 200px;
+    float: left;
+}
+
+.lobster {
+  font-family: 'Lobster', 'Arial, Helvetica';
+  font-size: 50px;
+  color: rgb(39,174,96);
+}
+
+.raleway {
+  font-family: 'Raleway', sans-serif;
+  color: rgb(1,174,161);
+}
+
+.thisway {
+  text-transform: uppercase;
+  color: rgb(152,179,154);
+  padding-left: 1rem;
+}
+
+.lato {
+  font-family: 'Lato', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(147,186,165);
+}
+
+a:hover {
+  text-decoration: underline;
+  color: rgb(147,186,165);
+}
+
+a.lobster-bar {
+  text-decoration: none;
+  color: rgb(39,174,96);
+}
+
+h3.raleway {
+  text-align: left;
+  color: rgb(1,174,161);
+}

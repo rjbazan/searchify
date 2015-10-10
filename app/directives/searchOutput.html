@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="col-md-12">
+    <input type="text" autofocus placeholder="Buscar.." ng-model="query" ng-change="request()">
+  </div>
+</div>
+<div class="col" ng-repeat="result in results.artists.items">
+  <figure>
+    <img ng-src="{{result.images[1].url}}" alt="{{result.name}}" width="200" height="200">
+    <a href="#/home/artist/{{result.id}}"><figcaption ng-if="result.images[1].url.length > '0'"> {{result.name}}</figcaption></a>
+  </figure>
+</div>
