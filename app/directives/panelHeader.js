@@ -11,7 +11,7 @@ function panelHeader() {
 
 HomeCtrl.$inject = ['$scope', 'spotify', 'UserService', '$rootScope'];
 
-HomeCtrl = function ($scope, spotify, UserService, $rootScope) {
+function HomeCtrl ($scope, spotify, UserService, $rootScope) {
         var vm = this;
 
         vm.user = null;
