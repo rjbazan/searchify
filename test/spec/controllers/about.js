@@ -1,6 +1,6 @@
 'use strict';
 
-describe('AboutCtrl', function() {
+describe('Some demo testing', function() {
   beforeEach(module('searchifyApp'));
 
   var $controller, spotify, $httpBackend;
@@ -10,6 +10,10 @@ describe('AboutCtrl', function() {
     $controller = _$controller_;
     spotify = _spotify_;
     $httpBackend = _$httpBackend_;
+    
+    $httpBackend.whenGET('/i18n/es/header.json').respond(200);
+    $httpBackend.whenGET('/i18n/es/login.json').respond(200);
+    $httpBackend.whenGET('/i18n/es/register.json').respond(200);
   }));
 
   describe('angular test suite', function() {
@@ -40,7 +44,7 @@ describe('AboutCtrl', function() {
     
     it('should test the controller', inject(function($rootScope, spotify){
       var $scope = $rootScope.$new();
-      $controller('ArtistCtrl', {$scope : $scope});
+      //$controller('searchOutputCtrl', {$scope : $scope});
       
       expect($scope).toBeDefined();
       $scope.artists = [{name: 'pepe', asd: 'asd'}, {name: 'pepe2', asd: 'asd2'}]

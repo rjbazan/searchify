@@ -1,6 +1,6 @@
 <div class="container">
   <div class="col-md-12">
-    <input type="text" autofocus placeholder="Buscar.." ng-model="query" ng-change="request()">
+    <input type="text" autofocus placeholder="{{'header.search' | translate}}" ng-model="query" ng-change="request()">
   </div>
 </div>
 <div class="col" ng-repeat="result in results.artists.items">

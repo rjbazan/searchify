@@ -3,6 +3,7 @@
 		"welcome": "Welcome {{user}}!",
 		"logout": "Logout",
 		"esBtn":"Spanish",
-		"enBtn": "English"
+		"enBtn": "English",
+		"search": "Search.."
 	}
 }
