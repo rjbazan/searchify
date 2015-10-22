@@ -28,8 +28,7 @@ angular
         template: '<panel-header></panel-header><artist-page></artist-page>'
       })
       .when('/home/album/:id', {
-        templateUrl: 'album/albumPage.html',
-        controller: 'AlbumCtrl'
+        template: '<panel-header></panel-header><my-clock></my-clock><album-page></album-page>'
       })
       .when('/register', {
         controller: 'RegisterCtrl',
