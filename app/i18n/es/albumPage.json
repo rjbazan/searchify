@@ -1,0 +1,12 @@
+{
+	"albumPage":{
+		"header": "(Album)",
+		"albumDetails": "Detalles del album",
+		"artist": "Artista: ",
+		"genre": "Genero: ",
+		"genreNotFound": "No encontrado",
+		"popularity": "Popularidad:",
+		"releaseDate": "Fecha de lanzamiento:",
+		"trackList": "Lista de Tracks:"
+	}
+}

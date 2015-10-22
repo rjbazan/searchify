@@ -13,6 +13,8 @@
     $translatePartialLoaderProvider.addPart('header');
     $translatePartialLoaderProvider.addPart('login');
     $translatePartialLoaderProvider.addPart('register');
+    $translatePartialLoaderProvider.addPart('albumPage');
+    $translatePartialLoaderProvider.addPart('artistPage');
     $translateProvider.useLoader('$translatePartialLoader', {
       urlTemplate: '/i18n/{lang}/{part}.json'
     });

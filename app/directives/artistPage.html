@@ -9,22 +9,22 @@
       <img ng-src="{{artist.images[1].url}}" alt="{{artist.name}}" width="300" height="300">
     </div>
     <div class="col-md-4 text-left">
-      <h3>Popularity: {{artist.popularity}}</h3>
-      <h3>Followers: {{artist.followers.total}}</h3>
+      <h3>{{'artistPage.popularity' | translate}} {{artist.popularity}}</h3>
+      <h3>{{'artistPage.followers' | translate}} {{artist.followers.total}}</h3>
     </div>
   </div>
   <div class="row">
     <div class="col-md-9">
-      <h3 class="lead text-center">Albums</h3>
+      <h3 class="lead text-center">{{'artistPage.albumsTitle' | translate}}</h3>
       <div class="col" ng-repeat="artistAlbum in artistAlbums">
         <figure class="text-center">
           <img ng-src="{{artistAlbum.images[1].url}}" alt="{{artistAlbum.name}}" width="200" height="200">
-          <a href="#/home/artist/{{relatedArtist.id}}"><figcaption ng-if="artistAlbum.images[1].url.length > '0'"> {{artistAlbum.name}}</figcaption></a>
+          <a href="#/home/album/{{artistAlbum.id}}"><figcaption ng-if="artistAlbum.images[1].url.length > '0'"> {{artistAlbum.name}}</figcaption></a>
         </figure>
       </div>
     </div>
     <div class="col-md-2 col-md-offset-1">
-      <h2 class="lead text-center">Relacionados</h2>
+      <h2 class="lead text-center">{{'artistPage.relatedTitle' | translate}}</h2>
       <div class="col" ng-repeat="relatedArtist in relatedArtists.artists">
         <figure>
           <img ng-src="{{relatedArtist.images[1].url}}" alt="{{relatedArtist.name}}" width="100" height="100">

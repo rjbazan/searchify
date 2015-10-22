@@ -1,0 +1,8 @@
+{
+	"artistPage": {
+		"popularity": "Popularity: ",
+		"followers": "Followers: ",
+		"albumsTitle": "Albums",
+		"relatedTitle": "Related Artists"
+	}
+}

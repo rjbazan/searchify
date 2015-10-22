@@ -1,0 +1,38 @@
+<!-- Album Page -->
+
+<!-- Header with the title of the album -->
+<header class="col-md-12 text-center lead" ">
+  <div >
+    <h1>{{ album.name }} <span>{{'albumPage.header' | translate}}</span></h1>
+  </div>
+</header>
+<!-- End of Header -->
+<div class="container ">  
+  <div class="col-md-6 ">
+    <img ng-src="{{album.images[0].url}} " width="400 " height="400 ">      
+  </div>
+  
+  <div class="col-md-6 text-left ">
+      <h2>{{'albumPage.albumDetails' | translate}}</h2>
+    <div ng-repeat="artist in album.artists ">
+      <span class="bold ">{{'albumPage.artist' | translate}}</span><a href="#/home/artist/{{artist.id}} "> {{ artist.name }}</a>
+    </div>
+    <div><span class="bold ">{{'albumPage.genre' | translate}}</span>
+      <span ng-if="album.genres.length=='0' ">
+        {{'albumPage.genreNotFound' | translate}}
+      </span>
+      <span ng-if="album.genres.length!='0' ">
+        {{ album.genres }}
+      </span>
+      <div><span class="bold">{{'albumPage.popularity' | translate}}<span> {{ album.popularity }}</div>
+      <div><span class="bold">{{'albumPage.releaseDate' | translate}}</span> {{ album.release_date | date }}</div> 
+    </div>
+    <div id="track-list ">
+     <h3>{{'albumPage.trackList' | translate}}</h3>
+      <div ng-repeat="track in tracks ">
+      {{track.track_number}}- {{track.name}} --
+      <span>({{track.duration_ms | date : 'mm:ss'}})</span>
+    </div>
+  </div>
+  </div>
+  </div>
