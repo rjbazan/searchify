@@ -11,7 +11,7 @@ function albumPage() {
 albumPageCtrl.$inject = ['$scope', '$routeParams', 'spotify'];
 
 function albumPageCtrl($scope, $routeParams, spotify) {
-
+  
   spotify.GetAlbum($routeParams.id).then(function (data){//get album
     $scope.album=data;
   });

@@ -16,7 +16,8 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
-    'pascalprecht.translate'
+    'pascalprecht.translate',
+    'ngMaterial'
   ])
   .config(function ($routeProvider, $locationProvider, $httpProvider) {
     $httpProvider.useApplyAsync(true);
@@ -47,8 +48,9 @@ angular
   
   .run(run);
   
-  run.$inject = ['$rootScope', '$location', '$cookieStore', '$http'];
-  function run($rootScope, $location, $cookieStore, $http) {
+  run.$inject = ['$rootScope', '$location', '$cookieStore', '$http', '$log'];
+  function run($rootScope, $location, $cookieStore, $http, $log) {
+    $log.info('Searchify');
     $rootScope.globals = $cookieStore.get('globals') || {};
     if ($rootScope.globals.currentUser) {
       //$http.defaults.headers.common['Authorization'] = 'Basic ' + $rootScope.globals.currentUser.authdata;

@@ -18,8 +18,12 @@
       <h3 class="lead text-center">{{'artistPage.albumsTitle' | translate}}</h3>
       <div class="col" ng-repeat="artistAlbum in artistAlbums">
         <figure class="text-center">
-          <img ng-src="{{artistAlbum.images[1].url}}" alt="{{artistAlbum.name}}" width="200" height="200">
-          <a href="#/home/album/{{artistAlbum.id}}"><figcaption ng-if="artistAlbum.images[1].url.length > '0'"> {{artistAlbum.name}}</figcaption></a>
+          <a ng-href="#/home/album/{{artistAlbum.id}}">
+            <img ng-src="{{artistAlbum.images[1].url}}" alt="{{artistAlbum.name}}" width="200" height="200">
+          </a>
+          <md-tooltip md-direction="top">
+            {{artistAlbum.name}}
+          </md-tooltip>
         </figure>
       </div>
     </div>
