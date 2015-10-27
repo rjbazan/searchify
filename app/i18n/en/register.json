@@ -9,6 +9,10 @@
 		"usernameRequired": "Username is required",
 		"password": "Password",
 		"passwordRequired": "Password is required",
+		"address": "Address",
+		"city": "City",
+		"postalCode": "Postal Code",
+		"birthDay": "Select date: ",
 		"registerBtn": "Register",
 		"cancelBtn": "Cancel"
 	}

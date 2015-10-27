@@ -9,6 +9,10 @@
 		"usernameRequired": "Falta usuario",
 		"password": "Contraseña",
 		"passwordRequired": "Falta contraseña",
+		"address": "Domicilio",
+		"city": "Ciudad",
+		"postalCode": "Código Postal",
+		"birthDay": "Elija fecha",
 		"registerBtn": "Registrarse",
 		"cancelBtn": "Cancelar"
 	}

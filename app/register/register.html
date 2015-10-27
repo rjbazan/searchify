@@ -1,31 +1,51 @@
+<h1 class="lead text-center">{{'register.title' | translate}}</h1>
 <div class="col-md-6 col-md-offset-3">
-    <h2>{{'register.title' | translate}}</h2>
-    <div ng-show="vm.error" class="alert alert-danger">{{vm.error}}</div>
-    <form name="form" ng-submit="vm.register()" role="form">
-        <div class="form-group" ng-class="{ 'has-error': form.firstName.$dirty && form.firstName.$error.required }">
-            <label for="username">{{'register.firstName' | translate}}</label>
-            <input type="text" name="firstName" id="firstName" class="form-control" ng-model="vm.user.firstName" required />
-            <span ng-show="form.firstName.$dirty && form.firstName.$error.required" class="help-block">{{'register.firstNameRequired' | translate}}</span>
-        </div>
-        <div class="form-group" ng-class="{ 'has-error': form.lastName.$dirty && form.lastName.$error.required }">
-            <label for="username">{{'register.lastName' | translate}}</label>
-            <input type="text" name="lastName" id="Text1" class="form-control" ng-model="vm.user.lastName" required />
-            <span ng-show="form.lastName.$dirty && form.lastName.$error.required" class="help-block">{{'register.lastNameRequired' | translate}}</span>
-        </div>
-        <div class="form-group" ng-class="{ 'has-error': form.username.$dirty && form.username.$error.required }">
-            <label for="username">{{'register.username' | translate}}</label>
-            <input type="text" name="username" id="username" class="form-control" ng-model="vm.user.username" required />
-            <span ng-show="form.username.$dirty && form.username.$error.required" class="help-block">{{'register.usernameRequired' | translate}}</span>
-        </div>
-        <div class="form-group" ng-class="{ 'has-error': form.password.$dirty && form.password.$error.required }">
-            <label for="password">{{'register.password' | translate}}</label>
-            <input type="password" name="password" id="password" class="form-control" ng-model="vm.user.password" required />
-            <span ng-show="form.password.$dirty && form.password.$error.required" class="help-block">{{'register.passwordRequired' | translate}}</span>
-        </div>
-        <div class="form-actions">
-            <button type="submit" ng-disabled="form.$invalid || vm.dataLoading" class="btn btn-primary">{{'register.registerBtn' | translate}}</button>
-            <img ng-if="vm.dataLoading" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
-            <a href="#/login" class="btn btn-link">{{'register.cancelBtn' | translate}}</a>
-        </div>
+    <form name="userForm" ng-submit="vm.register()" role="form">
+      <div layout layout-sm="column">
+        <md-input-container flex>
+          <label>{{'register.firstName' | translate}}</label>
+          <input ng-model="vm.user.firstName">
+        </md-input-container>
+        <md-input-container flex>
+          <label>{{'register.lastName' | translate}}</label>
+          <input ng-model="vm.user.lastname">
+        </md-input-container>
+<!---
+          <md-datepicker ng-model="vm.user.submissionDate" md-placeholder="{{'register.birthDay' | translate}}"></md-datepicker>
+--->
+      </div>
+      <div layout layout-sm="column">
+        <md-input-container flex>
+          <label>{{'register.username' | translate}}</label>
+          <input ng-model="vm.user.username" required>
+        </md-input-container>
+        <md-input-container flex>
+          <label>{{'register.password' | translate}}</label>
+          <input type="password" ng-model="vm.user.password" required>
+        </md-input-container>
+      </div>
+
+      <md-input-container flex>
+        <label>{{'register.address' | translate}}</label>
+        <input ng-model="vm.user.address">
+      </md-input-container>
+      <div layout layout-sm="column">
+        <md-input-container flex>
+          <label>{{'register.city' | translate}}</label>
+          <input ng-model="vm.user.city">
+        </md-input-container>
+        <md-input-container flex>
+          <label>{{'register.postalCode' | translate}}</label>
+          <input name="postalCode" ng-model="vm.user.postalCode" placeholder="1234" required ng-pattern="/^[0-9]{4}$/" md-maxlength="4">
+          <div ng-messages="userForm.postalCode.$error" role="alert" multiple>
+          </div>
+        </md-input-container>
+      </div>
+      <div layout="row" layout-sm="column">
+        <md-button type="submit" ng-disabled="userForm.$invalid || vm.dataLoading" class="md-raised md-primary">{{'register.registerBtn' | translate}}</md-button>
+        <md-button href="#/login" class="md-primary">{{'register.cancelBtn' | translate}}</md-button>
+
+      </div>
+        <md-progress-circular md-diameter="20px" ng-if="vm.dataLoading" md-mode="indeterminate"></md-progress-circular>
     </form>
 </div>
