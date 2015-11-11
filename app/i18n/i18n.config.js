@@ -19,6 +19,7 @@
       urlTemplate: '/i18n/{lang}/{part}.json'
     });
     $translateProvider.preferredLanguage('es');
+    $translateProvider.useLocalStorage();
 
   }
 

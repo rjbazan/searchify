@@ -21,8 +21,12 @@ function HomeCtrl ($scope, spotify, UserService, $rootScope, $translate) {
 
         initController();
         
-        function changeLang(langKey) {
-                $translate.use(langKey);
+        function changeLang() {
+                if (localStorage.NG_TRANSLATE_LANG_KEY === 'es') {
+                        $translate.use('en');
+                } else {
+                        $translate.use('es')
+                }
         }
 
         function initController() {
