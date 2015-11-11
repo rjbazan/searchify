@@ -81,7 +81,7 @@ module.exports = function (grunt) {
           open: {
         //target: 'http://localhost:9000', <- this works too
         target: 'http://localhost:<%= connect.options.port %>',
-        appName: 'opera'},
+        appName: 'chrome'},
           middleware: function (connect) {
             return [
               connect.static('.tmp'),

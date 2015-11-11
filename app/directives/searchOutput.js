@@ -13,11 +13,12 @@ function searchOutput(){
 	}
 }
 
-searchOutputCtrl.$inject = ['$scope', 'spotify', 'UserService', '$rootScope', '$timeout'];
+searchOutputCtrl.$inject = ['$scope', 'spotify', 'UserService', '$rootScope', '$timeout', '$location'];
 
-function searchOutputCtrl($scope, spotify, UserService, $rootScope, $timeout) {
+function searchOutputCtrl($scope, spotify, UserService, $rootScope, $timeout, $location) {
         $scope.results = [];
         $scope.request = request;
+        $scope.goToArtistPage = goToArtistPage;
         var timeout;
 
 
@@ -33,4 +34,8 @@ function searchOutputCtrl($scope, spotify, UserService, $rootScope, $timeout) {
                         $scope.results = [];
                 }
         };
+        
+        function goToArtistPage(clickedArtistId) {
+                $location.path('/home/artist/'+ clickedArtistId);
+        }
 }
