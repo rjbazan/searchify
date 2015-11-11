@@ -1,11 +1,14 @@
-<div class="navbar navbar-inverse navbar-static-top">
-  <div class='container'>
-    <a class="navbar-brand lobster" href="#/">Searchify</a>
-    <ul class="nav navbar-nav navbar-right">
-      <li><a translate="header.welcome" translate-values="{user: vm.user.firstName}"></a></li>
-      <li><a href=""><button translate="header.esBtn" ng-click="vm.changeLang('es')"></button></a></li>
-      <li><a href=""><button translate="header.enBtn" ng-click="vm.changeLang('en')"></button></a></li>
-      <li><a href='#/login' translate="header.logout"></a></li>
-    </ul>
-  </div>
+<div class="md-toolbar-tools">
+  <span flex="5"></span>
+  <h2>
+    <span class="lobster">Searchify</span>
+     </h2>
+  <span flex></span>
+  <md-button class="md-fab md-mini" aria-label="Profile">
+    <ng-md-icon icon="account_circle" style="fill: black" size="28"></ng-md-icon>
+  </md-button>
+  <md-button class="md-fab md-mini" aria-label="Logout" href='#/login'>
+    <ng-md-icon icon="logout" style="fill: black" size="28"></ng-md-icon>
+  </md-button>
+  <span flex="5"></span>
 </div>

@@ -1,14 +1,14 @@
 <div class="container">
     <div class="col-md-6 col-md-offset-3">
-        <h2 class="text-center">{{'login.title' | translate}}</h2>
+        <h3 class="md-headline">{{'login.title' | translate}}</h3>
         <form name="userForm" ng-submit="vm.login()" role="form">
             <md-input-container>
                 <label>{{'login.username' | translate}}</label>
-                <input ng-model="vm.username" required>
+                <input ng-model="vm.username" name="username" required>
             </md-input-container>
             <md-input-container>
                 <label>{{'login.password' | translate}}</label>
-                <input type="password" ng-model="vm.password" required>
+                <input type="password" name="password" ng-model="vm.password" required>
             </md-input-container>
             <div layout="row" layout-sm="column">
                 <md-button type="submit" ng-disabled="userForm.$invalid || vm.dataLoading" class="md-raised md-primary">{{'login.loginBtn' | translate}}</md-button>

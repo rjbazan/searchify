@@ -1,11 +1,18 @@
 <div class="container">
-  <div class="col-md-12">
-    <input type="text" autofocus placeholder="{{'header.search' | translate}}" ng-model="query" ng-change="request()">
-  </div>
+
+  <md-input-container class="md-icon-float md-block">
+    <!-- Use floating label instead of placeholder -->
+    <label>{{'header.search' | translate}}</label>
+    <ng-md-icon icon="search" style="fill: black" size="28"></ng-md-icon>
+    <input ng-model="query" type="text" ng-change="request()">
+  </md-input-container>
 </div>
-<div class="col" ng-repeat="result in results.artists.items">
-  <figure>
-    <img ng-src="{{result.images[1].url}}" alt="{{result.name}}" width="200" height="200">
-    <a href="#/home/artist/{{result.id}}"><figcaption ng-if="result.images[1].url.length > '0'"> {{result.name}}</figcaption></a>
-  </figure>
-</div>
+
+<md-grid-list md-cols-sm="1" md-cols-md="2" md-cols-gt-md="6" md-row-height-gt-md="1:1" md-row-height="4:3" md-gutter="8px"
+md-gutter-gt-sm="4px">
+  <md-grid-tile ng-repeat="result in results.artists.items" md-colspan-sm="1" class="green">
+    <img ng-src="{{result.images[1].url}}" height="100%" width="100%"></img>
+    <md-grid-tile-footer>
+      <h3>{{result.name}}</h3></md-grid-tile-footer>
+  </md-grid-tile>
+</md-grid-list>
