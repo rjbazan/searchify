@@ -1,4 +1,4 @@
-angular.module('searchifyApp').filter('agrupar', newFilter);
+/*angular.module('searchifyApp').filter('agrupar', newFilter);
 
 function newFilter() {
 	return function (collection, key) {
@@ -17,4 +17,4 @@ function newFilter() {
 		}
 	}
 
-}
+}*/

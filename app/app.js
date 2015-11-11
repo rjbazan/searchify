@@ -31,7 +31,7 @@ angular
         template: '<panel-header></panel-header><artist-page></artist-page>'
       })
       .when('/home/album/:id', {
-        template: '<panel-header></panel-header><my-clock></my-clock><album-page></album-page>'
+        template: '<panel-header></panel-header><album-page></album-page>'
       })
       .when('/register', {
         controller: 'RegisterCtrl',
