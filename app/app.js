@@ -17,7 +17,9 @@ angular
     'ngSanitize',
     'ngTouch',
     'pascalprecht.translate',
-    'ngMaterial'
+    'ngMaterial',
+    'ngMdIcons',
+    "ngMessages"
   ])
   .config(function ($routeProvider, $locationProvider, $httpProvider) {
     $httpProvider.useApplyAsync(true);
