@@ -19,7 +19,8 @@ angular
     'pascalprecht.translate',
     'ngMaterial',
     'ngMdIcons',
-    "ngMessages"
+    'ngMessages',
+    'lodash'
   ])
   .config(function ($routeProvider, $locationProvider, $httpProvider) {
     $httpProvider.useApplyAsync(true);

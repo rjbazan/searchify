@@ -39,6 +39,8 @@ module.exports = function(config) {
       'bower_components/angular-translate-storage-cookie/angular-translate-storage-cookie.js',
       'bower_components/angular-translate-storage-local/angular-translate-storage-local.js',
       'bower_components/bootstrap/dist/js/bootstrap.js',
+      'bower_components/lodash/lodash.js',
+      'bower_components/angular-lodash-module/angular-lodash-module.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
       "app/**/*.js",

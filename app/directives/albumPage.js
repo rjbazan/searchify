@@ -8,15 +8,16 @@ function albumPage() {
 	}
 }
 
-albumPageCtrl.$inject = ['$scope', '$routeParams', 'spotify'];
+albumPageCtrl.$inject = ['$scope', '$routeParams', 'spotify', 'groupBy'];
 
-function albumPageCtrl($scope, $routeParams, spotify) {
+function albumPageCtrl($scope, $routeParams, spotify, groupBy) {
   
   spotify.GetAlbum($routeParams.id).then(function (data){//get album
     $scope.album=data;
   });
 
   spotify.GetAlbumTracks($routeParams.id).then(function (data){ //get album tracks
+    groupBy.groupByAlbum(data.items);
     $scope.tracks=data.items;
 
   });
