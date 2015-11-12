@@ -8,6 +8,10 @@
         var vm = this;
  
         vm.register = register;
+        vm.provinces = ['Salta','Jujuy','Catamarca','Chaco','San Luis',
+            'San Juan','Formosa','Tucuman','La Pampa','Santiago','La Rioja',
+            'Neuquen','Buenos Aires','Misiones','Chubut','Entre Ríos','Santa Cruz',
+            'Tierra del Fuego','Mendoza','Corrientes','Rio Negro'];
  
         function register() {
             vm.dataLoading = true;

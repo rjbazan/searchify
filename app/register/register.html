@@ -32,7 +32,11 @@
       <div layout layout-sm="column">
         <md-input-container flex>
           <label>{{'register.city' | translate}}</label>
-          <input ng-model="vm.user.city">
+          <md-select ng-model="vm.user.city">
+          <md-option ng-repeat="province in vm.provinces" value="{{province}}">
+            {{province}}
+          </md-option>
+        </md-select>
         </md-input-container>
         <md-input-container flex>
           <label>{{'register.postalCode' | translate}}</label>
