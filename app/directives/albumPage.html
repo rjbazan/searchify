@@ -7,32 +7,36 @@
   </div>
 </header>
 <!-- End of Header -->
-<div class="container ">  
+<div class="container ">
   <div class="col-md-6 ">
-    <img ng-src="{{album.images[0].url}} " width="400 " height="400 ">      
-  </div>
-  
-  <div class="col-md-6 text-left ">
-      <h2>{{'albumPage.albumDetails' | translate}}</h2>
+    <h2>{{'albumPage.albumDetails' | translate}}</h2>
+    <img ng-src="{{album.images[0].url}} " width="400 " height="400 ">
     <div ng-repeat="artist in album.artists ">
       <span class="bold ">{{'albumPage.artist' | translate}}</span><a href="#/home/artist/{{artist.id}} "> {{ artist.name }}</a>
     </div>
-    <div><span class="bold ">{{'albumPage.genre' | translate}}</span>
+    <div>
+      <span class="bold ">{{'albumPage.genre' | translate}}</span>
       <span ng-if="album.genres.length=='0' ">
         {{'albumPage.genreNotFound' | translate}}
       </span>
       <span ng-if="album.genres.length!='0' ">
         {{ album.genres }}
       </span>
-      <div><span class="bold">{{'albumPage.popularity' | translate}}<span> {{ album.popularity }}</div>
-      <div><span class="bold">{{'albumPage.releaseDate' | translate}}</span> {{ album.release_date | date }}</div> 
-    </div>
-    <div id="track-list ">
-     <h3>{{'albumPage.trackList' | translate}}</h3>
-      <div ng-repeat="track in tracks ">
-      {{track.track_number}}- {{track.name}} --
-      <span>({{track.duration_ms | date : 'mm:ss'}})</span>
+      <div><span class="bold ">{{'albumPage.popularity' | translate}}<span> {{ album.popularity }}</div>
+      <div><span class="bold ">{{'albumPage.releaseDate' | translate}}</span> {{ album.release_date | date }}</div>
     </div>
   </div>
+  <div class="col-md-6 ">
+    <md-tabs md-selected="selectedIndex " md-dynamic-height md-border-bottom>
+      <md-tab ng-repeat="disc in discs track by $index " label="{{tabHeader($index, discs)}}  " style="color: black; ">
+        <div class="demo-tab tab{{$index%4}} " style="padding: 25px; text-align: left; ">
+          <div ng-repeat="track in disc ">
+            {{track.track_number}}- {{track.name}} --
+            <span>({{track.duration_ms | date : 'mm:ss'}})</span>
+          </div>
+          <br/>
+        </div>
+      </md-tab>
+    </md-tabs>
   </div>
-  </div>
+</div>

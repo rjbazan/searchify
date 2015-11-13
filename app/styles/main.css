@@ -58,3 +58,11 @@ h3.raleway {
   text-align: left;
   color: rgb(1,174,161);
 }
+
+span {
+  color: black;
+}
+
+md-tabs {
+    border: 1px solid #e1e1e1;
+}

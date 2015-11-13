@@ -17,8 +17,19 @@ function albumPageCtrl($scope, $routeParams, spotify, groupBy) {
   });
 
   spotify.GetAlbumTracks($routeParams.id).then(function (data){ //get album tracks
-    groupBy.groupByAlbum(data.items);
-    $scope.tracks=data.items;
-
+    var newJSON = groupBy.groupByDiscNumber(data.items,'disc_number');
+    
+    $scope.discs = newJSON;
+    $scope.tabHeader = hasManyDiscs;
   });
+  
+  function hasManyDiscs(index, discsArray) {
+    if (discsArray.hasOwnProperty('2')) {     
+        return "DISC "+(parseInt(index, 10) + 1).toString();
+    }
+    else {
+      return "Tracks";
+    }
+  }
+  
 }
