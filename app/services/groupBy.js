@@ -1,13 +1,17 @@
+'use strict'
+angular.module('searchifyApp').service('groupBy', groupByService);
 
-	angular.module('searchifyApp').service('groupBy', groupBy);
+groupByService.$inject = ['_'];
 
-	groupBy.$inject = ['spotify', '_'];
+function groupByService(_) {
+	var svc = this;
+	this.groupByDiscNumber = function (items, key) {
+		var results = [];
 
-	function groupBy( spotify, _) {
-		var group = this;
-		this.groupByAlbum = function(items) {
-			console.log(items);//return filteredItems;
-		}
-		return group;
+		results = _.groupBy(items, key);
+
+		return results
 	}
+	return svc;
+}
 
