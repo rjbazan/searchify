@@ -17,7 +17,7 @@ function albumPageCtrl($scope, $routeParams, spotify, groupBy) {
   });
 
   spotify.GetAlbumTracks($routeParams.id).then(function (data){ //get album tracks
-    var newJSON = groupBy.groupByDiscNumber(data.items,'disc_number');
+    var newJSON = groupBy.groupByDiscNumber(data.items,'disc_number'); //group by disc_number property
     
     $scope.discs = newJSON;
     $scope.tabHeader = hasManyDiscs;
@@ -25,7 +25,7 @@ function albumPageCtrl($scope, $routeParams, spotify, groupBy) {
   
   function hasManyDiscs(index, discsArray) {
     if (discsArray.hasOwnProperty('2')) {     
-        return "DISC "+(parseInt(index, 10) + 1).toString();
+        return "DISC " + (parseInt(index, 10) + 1).toString();
     }
     else {
       return "Tracks";
