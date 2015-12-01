@@ -5,13 +5,17 @@ groupByService.$inject = ['_'];
 
 function groupByService(_) {
 	var svc = this;
-	this.groupByDiscNumber = function (items, key) {
+
+	svc.groupByDiscNumber = discNumber;
+
+	return svc;
+
+	function discNumber(items, key) {
 		var results = [];
 
 		results = _.groupBy(items, key);
 
 		return results
 	}
-	return svc;
 }
 

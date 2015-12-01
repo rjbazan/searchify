@@ -68,4 +68,18 @@ md-tabs {
 }
 
 .green {
-  background: slategray}
+  background: slategray
+}
+  
+.title {
+  padding: 15px 0 20px;
+  list-style: none;
+  text-align: center;
+}
+
+.lirow{
+  float: left;
+  display: block;
+  height: 100px;
+  width: 100px;
+}

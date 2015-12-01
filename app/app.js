@@ -44,6 +44,9 @@ angular
         templateUrl: 'login/login.html',
         controllerAs: 'vm'
       })
+      .when('/files', {
+        template: '<file-upload></file-upload>'
+      })
       .otherwise({
         redirectTo: '/'
       });

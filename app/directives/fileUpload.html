@@ -1,0 +1,20 @@
+<ul>
+	<li class="title">
+		<h3>Lista de archivos</h3>
+		<form>
+			<input type="file" file-upload="vm.files" multiple>
+			<button ng-click="vm.addFile($index)">Subir</button>
+			<button ng-click="vm.deleteFile()">Borrar</button>
+			<ul>
+				<div class="col-md-4">Nombre</div>
+				<div class="col-md-4">Tamaño</div>
+				<div class="col-md-4">Tipo</div>
+				<li ng-repeat="file in vm.jsonFiles.files track by $index">
+					<div class="col-md-4">{{file.name}}</div>
+					<div class="col-md-4">{{file.size}}</div>
+					<div class="col-md-4">{{file.type}}</div>
+				</li>
+			</ul>
+		</form>
+	</li>
+</ul>
