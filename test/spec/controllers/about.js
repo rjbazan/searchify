@@ -14,6 +14,8 @@ describe('Some demo testing', function() {
     $httpBackend.whenGET('/i18n/es/header.json').respond(200);
     $httpBackend.whenGET('/i18n/es/login.json').respond(200);
     $httpBackend.whenGET('/i18n/es/register.json').respond(200);
+    $httpBackend.whenGET('/i18n/es/albumPage.json').respond(200);
+    $httpBackend.whenGET('/i18n/es/artistPage.json').respond(200);
   }));
 
   describe('angular test suite', function() {
@@ -34,11 +36,14 @@ describe('Some demo testing', function() {
     }));
     
     it('should return info from the server', inject(function(spotify){
-      var query;
-      $httpBackend.expectGET('https://api.spotify.com/v1/').respond(200,
+      var query = 'metallica';
+      $httpBackend.expectGET('https://api.spotify.com/v1/search?q='+query+'&type=album,artist').respond(200,
        [{name: 'pepe', asd: 'asd'},
        {name: 'pepe2', asd: 'asd2'}]);
        
+       spotify.GetAll(query);
+       
+       $httpBackend.flush();
 
     }));
     
