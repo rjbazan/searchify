@@ -1,39 +1,39 @@
 {
-	"files": {
-		"file_1": {
+	"files": [
+		{
 			"lastModified": 1442322862251,
 			"lastModifiedDate": "Tue Sep 15 2015 10:14:22 GMT-0300 (ART)",
 			"name": "7039612.jpg",
 			"size": 2821,
 			"type": "image/jpeg"
 		},
-		"file_2": {
+		{
 			"lastModified": 1442322862251,
 			"lastModifiedDate": "Tue Sep 15 2015 10:14:22 GMT-0300 (ART)",
 			"name": "0000002.jpg",
 			"size": 2822,
 			"type": "image/jpeg"
 		},
-		"file_3": {
+		{
 			"lastModified": 1442322862251,
 			"lastModifiedDate": "Tue Sep 15 2015 10:14:22 GMT-0300 (ART)",
 			"name": "0000003.jpg",
 			"size": 2823,
 			"type": "image/jpeg"
 		},
-		"file_4": {
+		{
 			"lastModified": 1442322862251,
 			"lastModifiedDate": "Tue Sep 15 2015 10:14:22 GMT-0300 (ART)",
 			"name": "0000004.jpg",
 			"size": 2824,
 			"type": "image/jpeg"
 		},
-		"file_5": {
+		{
 			"lastModified": 1442322862251,
 			"lastModifiedDate": "Tue Sep 15 2015 10:14:22 GMT-0300 (ART)",
 			"name": "0000005.jpg",
 			"size": 2825,
 			"type": "image/jpeg"
 		}
-	}
+	]
 }

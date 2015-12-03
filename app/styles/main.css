@@ -70,16 +70,34 @@ md-tabs {
 .green {
   background: slategray
 }
-  
-.title {
-  padding: 15px 0 20px;
+
+.container {
+  width: 50%;
+} 
+
+
+li {
   list-style: none;
-  text-align: center;
+  border-bottom: 1px solid #000;
+  padding-left: 0px;
 }
 
-.lirow{
-  float: left;
-  display: block;
-  height: 100px;
-  width: 100px;
+ul {
+  background-color: #fff;
+  border-radius: 10px;
+  padding-left: 0px;
+}
+
+ul > li:nth-child(2n) {
+  background-color: #eee;
+}
+
+.row-li {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+.btn-warning {
+  border-radius: 5px;
+  position: relative;
+  left: 220px;
 }

@@ -33,7 +33,7 @@ function FileUploadCtrl($http) {
 	vm.addFile = addFile;
 	vm.deleteFile = deleteFile;
 	vm.jsonFiles = [];
-	
+
 	vm.getFiles();
 
 	function upload() {
@@ -46,18 +46,18 @@ function FileUploadCtrl($http) {
 				console.log(e);
 			})
 	}
-	
+
 	function getFiles() {
 		$http.get('files.json')
-		.success(function(data) {
-			vm.jsonFiles = data;
-			console.log(vm.jsonFiles);
-		})
-		.error(function(e) {
-			console.log(e);
-		})
+			.success(function (data) {
+				vm.jsonFiles = data;
+				console.log(vm.jsonFiles);
+			})
+			.error(function (e) {
+				console.log(e);
+			})
 	}
-	
+
 	function addFile() {
 		console.log();
 		var file = {
@@ -67,11 +67,10 @@ function FileUploadCtrl($http) {
 			"size": 3333,
 			"type": "image/jpeg"
 		}
-		vm.jsonFiles.files[vm.jsonFiles.length] = file;
+		vm.jsonFiles.files.push(file);
 	}
-	
-	function deleteFile() {
-		vm.jsonFiles.files.file_6 = "";
-		console.log(vm.jsonFiles.files);
+
+	function deleteFile(index) {
+		vm.jsonFiles.files.splice(index, 1);
 	}
 }
