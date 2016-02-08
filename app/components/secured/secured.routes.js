@@ -11,12 +11,7 @@
     $stateProvider
 
       .state('secured', {
-        url: '',
-        views: {
-          '@': {
-            templateUrl: 'components/secured/home/home.html'
-          }
-        }
+        url: ''
       })
 
       .state('secured.home', {
