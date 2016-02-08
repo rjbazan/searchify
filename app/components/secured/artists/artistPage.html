@@ -12,26 +12,26 @@
       <h3>{{'artistPage.popularity' | translate}} {{artist.popularity}}</h3>
       <h3>{{'artistPage.followers' | translate}} {{artist.followers.total}}</h3>
     </div>
-      <div class="col-md-12">
-        <h3 class="lead text-center">{{'artistPage.albumsTitle' | translate}}</h3>
-        <div class="col" ng-repeat="artistAlbum in artistAlbums">
-          <figure class="text-center">
-            <a ng-href="#/home/album/{{artistAlbum.id}}">
-              <img ng-src="{{artistAlbum.images[1].url}}" alt="{{artistAlbum.name}}" width="150" height="150">
-            </a>
-            <md-tooltip md-direction="top">
-              {{artistAlbum.name}}
-            </md-tooltip>
-          </figure>
-        </div>
+    <div class="col-md-12">
+      <h3 class="lead text-center">{{'artistPage.albumsTitle' | translate}}</h3>
+      <div class="col" ng-repeat="artistAlbum in artistAlbums">
+        <figure class="text-center">
+          <a ui-sref="secured.home.albums({id:'{{artistAlbum.id}}'})">
+            <img ng-src="{{artistAlbum.images[1].url}}" alt="{{artistAlbum.name}}" width="150" height="150">
+          </a>
+          <md-tooltip md-direction="top">
+            {{artistAlbum.name}}
+          </md-tooltip>
+        </figure>
       </div>
+    </div>
   </div>
   <div class="col-md-2 col-md-offset-1">
     <h2 class="lead text-center">{{'artistPage.relatedTitle' | translate}}</h2>
     <div class="col" ng-if="$index < '8'" ng-repeat="relatedArtist in relatedArtists.artists track by $index">
       <figure>
         <img ng-src="{{relatedArtist.images[1].url}}" alt="{{relatedArtist.name}}" width="100" height="100">
-        <a href="#/home/artist/{{relatedArtist.id}}"><figcaption ng-if="relatedArtist.images[1].url.length > '0'"> {{relatedArtist.name}}</figcaption></a>
+        <a ui-sref="secured.home.artist({id:'{{relatedArtist.id}}'})"><figcaption ng-if="relatedArtist.images[1].url.length > '0'"> {{relatedArtist.name}}</figcaption></a>
       </figure>
     </div>
   </div>

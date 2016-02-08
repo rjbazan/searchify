@@ -1,9 +1,9 @@
-(function () {
-	angular.module('searchifyApp').controller('LoginCtrl', LoginCtrl);
+(function (angular) {
+	angular.module('sf.auth').controller('LoginCtrl', LoginCtrl);
 
-	LoginCtrl.$inject = ['$location', 'AuthenticationService', 'FlashService'];
+	LoginCtrl.$inject = ['$state', 'AuthenticationService', 'FlashService'];
 
-	function LoginCtrl($location, AuthenticationService, FlashService) {
+	function LoginCtrl($state, AuthenticationService, FlashService) {
 		var vm = this;
 
 		vm.login = login;
@@ -18,7 +18,7 @@
 				console.log(response.message);
 				if (response.success) {
 					AuthenticationService.SetCredentials(vm.username, vm.password);
-					$location.path('/');
+					$state.go('secured.home');
 				} else {
 					FlashService.Error(response.message);
 					vm.error = response.message;
@@ -28,4 +28,4 @@
 		}
 
 	}
-})();
+})(angular);

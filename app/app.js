@@ -13,44 +13,18 @@ angular
     'ngAnimate',
     'ngCookies',
     'ngResource',
-    'ngRoute',
+    'ui.router',
     'ngSanitize',
     'ngTouch',
     'pascalprecht.translate',
     'ngMaterial',
     'ngMdIcons',
     'ngMessages',
-    'lodash'
+    'lodash',
+    'sf.auth',
+    'sf.secured'
   ])
-  .config(function ($routeProvider, $locationProvider, $httpProvider) {
-    $httpProvider.useApplyAsync(true);
-    $routeProvider
-      .when('/', {
-        template: '<panel-header></panel-header><search-output></search-output>'
-      })
-      .when('/home/artist/:id', {
-        template: '<panel-header></panel-header><artist-page></artist-page>'
-      })
-      .when('/home/album/:id', {
-        template: '<panel-header></panel-header><album-page></album-page>'
-      })
-      .when('/register', {
-        controller: 'RegisterCtrl',
-        templateUrl: 'register/register.html',
-        controllerAs: 'vm'
-      })
-      .when('/login', {
-        controller: 'LoginCtrl',
-        templateUrl: 'login/login.html',
-        controllerAs: 'vm'
-      })
-      .when('/files', {
-        template: '<file-upload></file-upload>'
-      })
-      .otherwise({
-        redirectTo: '/'
-      });
-  })
+
   
   .run(run);
   

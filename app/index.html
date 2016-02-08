@@ -30,9 +30,9 @@
 
   <!-- Add your site or application content here -->
 
-  <div class="row">
-  <div class="" ng-view=""></div>
-  </div>
+  <div ui-view></div>
+
+
 
 
   <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
@@ -52,26 +52,48 @@
   <script src="bower_components/angular/angular.js"></script>
   <script src="bower_components/angular-animate/angular-animate.js"></script>
   <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+  <script src="bower_components/lodash/lodash.js"></script>
+  <script src="bower_components/angular-lodash-module/angular-lodash-module.js"></script>
   <script src="bower_components/angular-aria/angular-aria.js"></script>
   <script src="bower_components/angular-material/angular-material.js"></script>
   <script src="bower_components/angular-material-icons/angular-material-icons.min.js"></script>
   <script src="bower_components/angular-messages/angular-messages.js"></script>
   <script src="bower_components/angular-resource/angular-resource.js"></script>
-  <script src="bower_components/angular-route/angular-route.js"></script>
   <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
   <script src="bower_components/angular-touch/angular-touch.js"></script>
   <script src="bower_components/angular-translate/angular-translate.js"></script>
   <script src="bower_components/angular-translate-loader-partial/angular-translate-loader-partial.js"></script>
   <script src="bower_components/angular-translate-storage-cookie/angular-translate-storage-cookie.js"></script>
   <script src="bower_components/angular-translate-storage-local/angular-translate-storage-local.js"></script>
+  <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
   <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
-  <script src="bower_components/lodash/lodash.js"></script>
-  <script src="bower_components/angular-lodash-module/angular-lodash-module.js"></script>
   <!-- endbower -->
   <!-- endbuild -->
 
   <!-- build:js({.tmp,app}) scripts/scripts.js -->
-  <script src="app.js"></script>
+  
+  <!-- main module -->
+  <script src="app.js"></script> 
+  <!-- secured module -->
+  <script src="components/secured/secured.module.js"></script>
+  <script src="components/secured/secured.routes.js"></script>
+  <script src="components/secured/home/searchOutput.js"></script>
+  <script src="components/secured/home/panelHeader.js"></script>
+  <script src="components/secured/artists/artistPage.js"></script>
+  <script src="components/secured/albums/albumPage.js"></script>
+  <script src="components/secured/services/spotifyService.js"></script>
+  
+  <!-- auth module -->
+  <script src="components/auth/auth.module.js"></script>
+  <script src="components/auth/auth.routes.js"></script>
+  <script src="components/auth/register/registerCtrl.js"></script>
+  <script src="components/auth/login/loginCtrl.js"></script>
+  <script src="components/auth/services/authentication.js"></script>
+  <script src="components/auth/services/userService.js"></script>
+  <script src="components/auth/services/flashService.js"></script>
+
+  
+  <!-- i18n  -->
   <script src="i18n/i18n.config.js"></script>
   
   
@@ -79,28 +101,16 @@
   <script src="directives/filter.js"></script>
   
   <!-- controllers -->
-  <script src="register/registerCtrl.js"></script>
-  <script src="login/loginCtrl.js"></script>
+  
   
   
   <!-- services -->
-  <script src="services/flashService.js"></script>
-  <script src="services/spotifyService.js"></script>
-  <script src="services/authentication.js"></script>
-  <script src="services/userService.js"></script>
+  
+  
+  
   <script src="services/weatherService.js"></script>
   <script src="services/groupBy.js"></script>
-  
-  
-  <!-- directives -->
-  <script src="directives/panelHeader.js"></script>
-  <script src="directives/searchOutput.js"></script>
-  <script src="directives/searchBar.js"></script>
-  <script src="directives/artistPage.js"></script>
-  <script src="directives/albumPage.js"></script>
-  <script src="directives/clock.js"></script>
-  <script src="directives/fileUpload.js"></script>
-  <script src="directives/headerCollapse.js"></script>
+
   
   <!-- endbuild -->
 </body>

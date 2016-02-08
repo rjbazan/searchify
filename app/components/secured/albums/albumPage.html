@@ -12,7 +12,7 @@
     <h2>{{'albumPage.albumDetails' | translate}}</h2>
     <img ng-src="{{album.images[0].url}} " width="250 " height="250 ">
     <div ng-repeat="artist in album.artists ">
-      <span class="bold ">{{'albumPage.artist' | translate}}</span><a href="#/home/artist/{{artist.id}} "> {{ artist.name }}</a>
+      <span class="bold ">{{'albumPage.artist' | translate}}</span><a ui-sref="secured.home.artist({id: '{{artist.id}}'}) "> {{ artist.name }}</a>
     </div>
     <div>
       <span class="bold ">{{'albumPage.genre' | translate}}</span>
@@ -28,7 +28,7 @@
   </div>
   <div class="col-md-6 ">
     <md-tabs md-selected="selectedIndex " md-dynamic-height md-border-bottom>
-      <md-tab ng-repeat="disc in discs track by $index " label="{{tabHeader($index, discs)}}  " style="color: black; ">
+      <md-tab ng-repeat="disc in discs track by $index " label="{{tabHeader($index, discs)}} " style="color: black; ">
         <div class="demo-tab tab{{$index%4}} " style="padding: 25px; text-align: left; ">
           <div ng-repeat="track in disc ">
             {{track.track_number}}- {{track.name}} --
